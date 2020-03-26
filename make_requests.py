@@ -21,11 +21,12 @@ def load_json(r: str, file_counter: int):
         file_name = './location_' + str(file_counter) + '.json'
         with urllib.request.urlopen(r) as f:
             data = json.load(f)
-        with open(file_name, 'w') as handler:
-            json.dump(data, handler)
+            return data
+        # with open(file_name, 'w') as handler:
+        #     json.dump(data, handler)
 
 
-api_getter('YPfkbkEbwdPHBHLxeFSIJQGPzjLUJYIB', 'https://www.ncdc.noaa.gov/cdo-web/api/v2/')
+# api_getter('YPfkbkEbwdPHBHLxeFSIJQGPzjLUJYIB', 'https://www.ncdc.noaa.gov/cdo-web/api/v2/')
 # import urllib.request
 # import urllib.parse
 # import json
